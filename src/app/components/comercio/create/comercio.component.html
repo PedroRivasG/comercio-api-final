@@ -1,0 +1,72 @@
+<div class="login">
+  <form class="custom-form" method="post">
+    <h1>Crear comercio</h1>
+    <input
+      type="text"
+      name="nombre"
+      placeholder="Ingresar Nombre"
+      required="required"
+      [(ngModel)]="nombre"
+      #it="ngModel"
+    />
+    <input
+      type="text"
+      name="propietario"
+      placeholder="Ingresar Propietario"
+      required="required"
+      [(ngModel)]="nombrePropietario"
+      #it="ngModel"
+    />
+    <input
+      type="tel"
+      name="telefono"
+      placeholder="Ingresar Telefono"
+      required="required"
+      [(ngModel)]="telefono"
+      #it="ngModel"
+    />
+    <input
+      type="text"
+      name="categoria"
+      placeholder="Ingresar Categoria"
+      required="required"
+      [(ngModel)]="categoria"
+      #it="ngModel"
+    />
+    <input
+      type="text"
+      name="descripcion"
+      placeholder="Ingresar Descripcion"
+      required="required"
+      [(ngModel)]="descripcion"
+      #it="ngModel"
+    />
+    <input
+      type="text"
+      name="direccion"
+      placeholder="Ingresar Direccion"
+      required="required"
+      [(ngModel)]="direccion"
+      #it="ngModel"
+    />
+    <input
+      type="text"
+      name="latitud"
+      placeholder="Ingresar Latitud"
+      required="required"
+      [(ngModel)]="latitud"
+      #it="ngModel"
+    />
+    <input
+      type="text"
+      name="longitud"
+      placeholder="Ingresar Longitud"
+      required="required"
+      [(ngModel)]="longitud"
+      #it="ngModel"
+    />
+    <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+
+    <button type="submit" (click)="crear()">Crear</button>
+  </form>
+</div>

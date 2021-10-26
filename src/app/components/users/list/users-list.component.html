@@ -1,0 +1,36 @@
+<div class="table-container">
+  <div class="table-horizontal-container">
+    <h1>Lista usuarios</h1>
+    <table class="unfixed-table">
+      <thead>
+        <tr>
+          <th style="background-color: lightblue">Nombre</th>
+          <th style="background-color: lightblue">Email</th>
+          <th style="background-color: lightblue">Username</th>
+          <th style="background-color: lightblue">Password</th>
+          <th style="background-color: lightblue">Accion</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of usuarios">
+          <th>{{ user.nombre }}</th>
+          <th>{{ user.email }}</th>
+          <th>{{ user.username }}</th>
+          <th>*****</th>
+
+          <th>
+            <button style="margin: 5px" (click)="verUsuario(user._id)">
+              Ver
+            </button>
+            <button style="margin: 5px" (click)="editarUser(user._id)">
+              Editar
+            </button>
+            <button style="margin: 5px" (click)="eliminarUser(user._id)">
+              Eliminar
+            </button>
+          </th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

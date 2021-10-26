@@ -1,0 +1,53 @@
+<div class="table-container">
+  <div class="table-horizontal-container">
+    <h3>
+      Lista comercios
+      <button class="crear" (click)="crearComercio()">Crear</button>
+    </h3>
+    <table class="unfixed-table">
+      <thead>
+        <tr>
+          <th style="background-color: lightblue">Nombre</th>
+          <th style="background-color: lightblue">Propietario</th>
+          <th style="background-color: lightblue">Telefono</th>
+          <th style="background-color: lightblue">Categoria</th>
+          <th style="background-color: lightblue">Descripcion</th>
+          <th style="background-color: lightblue">Direccion</th>
+          <th style="background-color: lightblue">Lat</th>
+          <th style="background-color: lightblue">Lgt</th>
+          <th style="background-color: lightblue">Accion</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let comercio of comercios">
+          <th>{{ comercio.nombre }}</th>
+          <th>{{ comercio.nombrePropietario }}</th>
+          <th>{{ comercio.telefono }}</th>
+          <th>{{ comercio.categoria }}</th>
+          <th>{{ comercio.descripcion }}</th>
+          <th>{{ comercio.direccion }}</th>
+          <th>{{ comercio.latitud }}</th>
+          <th>{{ comercio.longitud }}</th>
+
+          <th>
+            <button style="margin: 2px" (click)="verComercio(comercio._id)">
+              Ver
+            </button>
+            <button style="margin: 2px" (click)="verMapa(comercio._id)">
+              Mapa
+            </button>
+            <button style="margin: 2px" (click)="editarComercio(comercio._id)">
+              Editar
+            </button>
+            <button
+              style="margin: 2px"
+              (click)="eliminarComercio(comercio._id)"
+            >
+              Eliminar
+            </button>
+          </th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

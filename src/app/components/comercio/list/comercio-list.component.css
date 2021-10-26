@@ -1,0 +1,26 @@
+/* default styling. Nothing to do with freexing first row and column */
+main {
+  display: flex;
+}
+main > * {
+  border: 1px solid;
+}
+table {
+  font-family: helvetica;
+}
+td,
+th {
+  border: 1px solid;
+  padding: 8px;
+  min-width: 100px;
+  background: white;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.crear {
+  margin: 5px;
+  box-sizing: border-box;
+  min-width: 10px;
+  font-size: small;
+}
